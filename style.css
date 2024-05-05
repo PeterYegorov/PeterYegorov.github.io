@@ -1,15 +1,12 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #f0f0f0;
     text-align: center;
-    padding: 10px 0;
 }
 
 nav ul {
@@ -19,45 +16,30 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 90vh;
-    padding: 20px;
-}
-
-.hero {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.profile-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-.intro-text h1 {
-    margin: 0;
     color: #333;
 }
 
-.intro-text p {
-    color: #555;
-    font-size: 1.2rem;
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-card {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    width: 80%; /* Adjust width as needed */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
