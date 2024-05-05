@@ -43,3 +43,16 @@ main {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+
+main a {
+    color: #0077b5; /* LinkedIn blue, you can choose another color */
+    text-decoration: none; /* Removes underline from links */
+}
+
+main a:hover {
+    text-decoration: underline; /* Adds underline on hover for better interaction feedback */
+}
+
+.fa {
+    margin-right: 8px; /* Adds some space between the icon and the text */
+}
