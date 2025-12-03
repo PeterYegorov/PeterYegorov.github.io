@@ -3,25 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts | Peter Yegorov</title>
+    <title>Contact | Peter Yegorov</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/168049ce2f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav>
+            <a class="logo" href="index.html">Peter Yegorov</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contacts</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Contact Me</h1>
-        <p><a href="mailto:peter.yegorov.official@gmail.com"><i class="fa fa-envelope"></i> peter.yegorov.official@gmail.com</a></p>
-        <p><a href="https://www.linkedin.com/in/peter-yegorov/" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn Profile</a></p>
+        <section class="section" aria-labelledby="contact-title">
+            <h2 id="contact-title">Let's catch up</h2>
+            <p>Share feedback, request a call, or send media for this site. Everything is placeholder-ready and I will swap in your assets once I receive them.</p>
+            <div class="contact-panel">
+                <article class="contact-card">
+                    <h3>Email</h3>
+                    <p>placeholder@email.com</p>
+                    <p class="hint">Update with your preferred inbox and add <code>mailto:</code> once finalized.</p>
+                </article>
+                <article class="contact-card">
+                    <h3>LinkedIn</h3>
+                    <p><a href="#">linkedin.com/in/PeterYegorov</a></p>
+                    <p class="hint">Replace with your polished profile link.</p>
+                </article>
+                <article class="contact-card">
+                    <h3>GitHub</h3>
+                    <p><a href="#">github.com/PeterYegorov</a></p>
+                    <p class="hint">Point to the repo you'd like employers to review.</p>
+                </article>
+                <article class="contact-card">
+                    <h3>Schedule</h3>
+                    <p>Calendar placeholder (Calendly / Google Meet)</p>
+                    <p class="hint">Add your calendar link when you want people to book time directly.</p>
+                </article>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <p>Provide your resume, portrait, and project media to keep this site current.</p>
+    </footer>
 </body>
 </html>

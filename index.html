@@ -5,21 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Peter Yegorov</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
     <header>
         <nav>
+            <a class="logo" href="index.html">Peter Yegorov</a>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contacts</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Welcome to My Personal Website</h1>
-        <p>This is the home page. Explore more about me and my projects!</p>
+        <section class="hero" id="home">
+            <div class="hero-text">
+                <p class="eyebrow">Product Researcher × Full-stack Builder</p>
+                <h1>Documenting the path from master's research to my current app.</h1>
+                <p>I blend research rigor with product instincts and am now shaping my own startup while keeping a close eye on collaborations that need deep technical ownership. This site is a living resume: every section is a placeholder you can fill with your latest imagery, video demos, and polished narratives.</p>
+                <div class="hero-actions">
+                    <a class="button" href="assets/PeterYegorov-Resume.pdf" download>Download resume (PDF)</a>
+                    <a class="button ghost" href="resume.html">View digital resume</a>
+                </div>
+                <ul class="hero-contact">
+                    <li><strong>Email:</strong> placeholder@email.com</li>
+                    <li><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/PeterYegorov</a></li>
+                    <li><strong>GitHub:</strong> <a href="#">github.com/PeterYegorov</a></li>
+                    <li><strong>Phone:</strong> +1 (000) 000-0000</li>
+                </ul>
+                <p class="hint">Swap these placeholders once you upload your preferred contact channels.</p>
+            </div>
+            <div class="hero-media">
+                <div class="portrait-placeholder">
+                    <span>Portrait / personal photo placeholder</span>
+                </div>
+                <p class="hint">Drop your portrait into <code>images/mehome.jpeg</code> or replace this block with your preferred image + caption.</p>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="summary">
+            <h2 id="summary">Story so far</h2>
+            <p>The goal of this page is to serve as your go-to reference when recruiters, founders, or mentors want a single link: every project, publication, and product announcement will live here. Use the callout grids below to outline each milestone, drop a short video, and upload the demo screenshots once they are ready.</p>
+            <div class="section-grid">
+                <article class="project-card">
+                    <h3>Academic milestones</h3>
+                    <p>Summarize your master's thesis, notable conference talks, or awards. Replace this paragraph with a short story about the research and embed the PDF or video as soon as you have it.</p>
+                    <div class="project-card__media">
+                        Add your thesis cover + video walkthrough here.
+                    </div>
+                </article>
+                <article class="project-card">
+                    <h3>Full-time projects</h3>
+                    <p>Highlight products you shipped while on a team. Mention the problem, your role, and the impact. Use the video placeholder below for demos or retrospectives you plan to upload.</p>
+                    <div class="project-card__media">
+                        Video / demo placeholder for industry work.
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="preview">
+            <h2 id="preview">Project gallery (placeholders)</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-card__media">
+                        Image placeholder
+                    </div>
+                    <h3>Master's degree projects</h3>
+                    <p>Upload each paper, poster, or prototype. Mention datasets, tooling, and your contributions.</p>
+                    <ul class="project-tags">
+                        <li>Research</li>
+                        <li>Prototype</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <div class="project-card__media">
+                        Illustration placeholder
+                    </div>
+                    <h3>Research collaborations</h3>
+                    <p>Link to preprints, recordings, or side experiments here.</p>
+                    <ul class="project-tags">
+                        <li>Lab</li>
+                        <li>Data</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <div class="project-card__media">
+                        Screenshot placeholder
+                    </div>
+                    <h3>Full-time work</h3>
+                    <p>Share architecture diagrams, process notes, or debugging stories.</p>
+                    <ul class="project-tags">
+                        <li>Team</li>
+                        <li>Impact</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <div class="project-card__media">
+                        Video placeholder
+                    </div>
+                    <h3>Your personal app</h3>
+                    <p>The latest version of your app should live here once you record the walkthrough.</p>
+                    <ul class="project-tags">
+                        <li>Startup</li>
+                        <li>Demo</li>
+                    </ul>
+                </article>
+            </div>
+            <p class="hint">Replace placeholders with screenshots, GIFs, or Loom links as soon as they are ready.</p>
+        </section>
+
+        <section class="section" aria-labelledby="next-steps">
+            <h2 id="next-steps">Next steps</h2>
+            <p>This repository is the curriculum vitae for your next chapter. When you provide your resume, portrait, and project media, I will slot them into their respective sections and push the updates so Pages always serves the latest story.</p>
+        </section>
     </main>
+    <footer class="footer">
+        <p>Need anything else? Drop a note to placeholder@email.com or open an issue in this repo.</p>
+    </footer>
 </body>
 </html>
