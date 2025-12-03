@@ -8,320 +8,303 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/168049ce2f.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="two-column-layout">
+    <!-- Portfolio Toggle -->
+    <div class="portfolio-toggle">
+        <a href="index.html" class="toggle-btn active">
+            <i class="fas fa-laptop-code"></i> Technical
+        </a>
+        <a href="modeling.html" class="toggle-btn">
+            <i class="fas fa-camera"></i> Modeling
+        </a>
+    </div>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero fade-in">
-            <div class="hero-content">
-                <h1>Projects</h1>
-                <p class="subtitle">Production AI Systems, ML Research & Full-Stack Development</p>
-                <p>Explore my portfolio of agentic applications, machine learning research, and end-to-end solutions across insurance, legal tech, finance, and critical infrastructure.</p>
+    <!-- Left Sidebar - Same as Homepage -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-photo">
+                <img src="images/profile.jpg" alt="Peter Yegorov">
             </div>
-        </section>
-
-        <!-- Production AI Projects -->
-        <section class="section" id="production-ai">
-            <h2 class="section-title">Production AI Systems</h2>
-            <p class="section-subtitle">Enterprise-grade AI applications deployed at scale</p>
-
-            <!-- Medical Records System -->
-            <div class="card" id="medical-records" style="margin-bottom: 3rem;">
-                <div class="grid grid-2" style="gap: 2rem;">
-                    <div>
-                        <span class="project-category">Full-Stack AI · Neptune Technologies</span>
-                        <h3 style="font-size: 2rem; margin: 1rem 0; color: var(--text-primary);">Agentic Medical Record Request System</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                            Designed and built a comprehensive full-stack application for law firms that automates the entire medical record retrieval process from healthcare providers. The system uses intelligent email and fax integrations with automatic response polling and Temporal workflow orchestration.
-                        </p>
-                        
-                        <h4 style="color: var(--primary-color); margin: 1.5rem 0 1rem;">Key Features:</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> React-based case management interface with real-time status tracking</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> FastAPI backend with Temporal workflow orchestration</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> Automated email/fax integrations with intelligent response polling</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> PostgreSQL database for reliable state management</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> Saves 100+ hours of manual work weekly</li>
-                        </ul>
-
-                        <div class="project-tags" style="margin-top: 1.5rem;">
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">React</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">Temporal</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">AWS</span>
-                            <span class="tag">Cursor</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="video-placeholder">
-                            <i class="fas fa-video"></i>
-                            <p>Demo Video Coming Soon</p>
-                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Upload your video to: assets/medical-records-demo.mp4</p>
-                        </div>
-                        <div style="margin-top: 1rem; padding: 1.5rem; background: var(--bg-secondary); border-radius: var(--radius-md); border-left: 4px solid var(--success-color);">
-                            <h4 style="color: var(--success-color); margin-bottom: 0.5rem;">Impact</h4>
-                            <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">Automated workflow eliminates manual coordination with hundreds of healthcare providers</p>
-                            <p style="font-size: 2rem; font-weight: 700; color: var(--primary-color); margin-top: 1rem;">100+ hrs/week saved</p>
-                        </div>
-                    </div>
+            <h1>Peter Yegorov</h1>
+            <h2>Full-Stack AI Engineer</h2>
+            <div class="sidebar-contacts">
+                <a href="mailto:peter.yegorov.official@gmail.com" class="sidebar-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>peter.yegorov.official@gmail.com</span>
+                </a>
+                <a href="tel:+13044354748" class="sidebar-link">
+                    <i class="fas fa-phone"></i>
+                    <span>(304) 435-4748</span>
+                </a>
+                <a href="https://www.linkedin.com/in/peter-yegorov/" target="_blank" class="sidebar-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/PeterYegorov" target="_blank" class="sidebar-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+            <div class="sidebar-stats">
+                <div class="sidebar-stat">
+                    <div class="stat-num">4.0</div>
+                    <div class="stat-text">GPA</div>
+                </div>
+                <div class="sidebar-stat">
+                    <div class="stat-num">6+</div>
+                    <div class="stat-text">Years</div>
+                </div>
+                <div class="sidebar-stat">
+                    <div class="stat-num">95%</div>
+                    <div class="stat-text">Accuracy</div>
                 </div>
             </div>
-
-            <!-- Insurance Claims Automation -->
-            <div class="card" id="insurance-claims" style="margin-bottom: 3rem;">
-                <div class="grid grid-2" style="gap: 2rem;">
-                    <div>
-                        <div class="video-placeholder">
-                            <i class="fas fa-video"></i>
-                            <p>Demo Video Coming Soon</p>
-                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Upload your video to: assets/insurance-claims-demo.mp4</p>
-                        </div>
-                        <div style="margin-top: 1rem; padding: 1.5rem; background: var(--bg-secondary); border-radius: var(--radius-md); border-left: 4px solid var(--accent-color);">
-                            <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Accuracy</h4>
-                            <p style="color: var(--text-secondary);">Document intelligence pipeline with hybrid rule-based and LLM approaches</p>
-                            <p style="font-size: 2rem; font-weight: 700; color: var(--primary-color); margin-top: 1rem;">95%+ field extraction</p>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="project-category">Document Intelligence · Neptune Technologies</span>
-                        <h3 style="font-size: 2rem; margin: 1rem 0; color: var(--text-primary);">Insurance Claims Automation</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                            Multi-agent AI system for processing Bodily Injury and Property Damage claims end-to-end. Built intelligent document processing pipeline handling mold inspection reports, policy documents, damage estimates, and accident data.
-                        </p>
-                        
-                        <h4 style="color: var(--primary-color); margin: 1.5rem 0 1rem;">Technical Highlights:</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> OpenAI-powered text extraction and OCR for scanned documents</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> Hybrid rule-based and LLM field extraction (95%+ accuracy)</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> Multi-agent coordination for complex claim workflows</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> Litify (Salesforce) platform integration</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> Deployed on AWS EC2 with GitLab CI/CD</li>
-                        </ul>
-
-                        <div class="project-tags" style="margin-top: 1.5rem;">
-                            <span class="tag">OpenAI</span>
-                            <span class="tag">OCR</span>
-                            <span class="tag">LangChain</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">AWS EC2</span>
-                            <span class="tag">GitLab CI/CD</span>
-                            <span class="tag">Document AI</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ML Research Projects -->
-        <section class="section" id="ml-research">
-            <h2 class="section-title">Machine Learning Research</h2>
-            <p class="section-subtitle">Academic research in anomaly detection, NLP, and critical infrastructure security</p>
-
-            <!-- Power Grid Security -->
-            <div class="card" id="power-grid" style="margin-bottom: 3rem;">
-                <div class="grid grid-2" style="gap: 2rem;">
-                    <div>
-                        <span class="project-category">ML Research · West Virginia University</span>
-                        <span class="badge badge-warning" style="margin-left: 1rem;">Best Paper Award</span>
-                        <h3 style="font-size: 2rem; margin: 1rem 0; color: var(--text-primary);">Power Grid Anomaly Detection</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                            Advanced machine learning research for critical infrastructure protection. Engineered temporal dependency features from network packet streams to detect cyber attacks on power grid systems with exceptional accuracy.
-                        </p>
-                        
-                        <h4 style="color: var(--primary-color); margin: 1.5rem 0 1rem;">Research Contributions:</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> Novel temporal feature engineering achieving 95%+ accuracy</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> Variational autoencoders for attack pattern recognition</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> Transformer models for sequence analysis</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> Processing raw Wireshark captures for IEC61850 GOOSE protocol</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> Digital twin integration for real-time monitoring</li>
-                        </ul>
-
-                        <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md);">
-                            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.5rem;"><strong>Publication:</strong></p>
-                            <p style="color: var(--text-primary);">"Analyzing GOOSE Security in IEC61850-based Substation using ML, SDN and Digital Twin"</p>
-                            <p style="color: var(--text-light); margin-top: 0.25rem;">2023 North American Power Symposium</p>
-                        </div>
-
-                        <div class="project-tags" style="margin-top: 1.5rem;">
-                            <span class="tag">PyTorch</span>
-                            <span class="tag">Transformers</span>
-                            <span class="tag">VAE</span>
-                            <span class="tag">Wireshark</span>
-                            <span class="tag">Security</span>
-                            <span class="tag">Time Series</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="video-placeholder">
-                            <i class="fas fa-image"></i>
-                            <p>Research Visualization Coming Soon</p>
-                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Upload images/visualizations to: assets/power-grid-*.png</p>
-                        </div>
-                        <div style="margin-top: 1rem; padding: 1.5rem; background: var(--bg-secondary); border-radius: var(--radius-md); border-left: 4px solid var(--success-color);">
-                            <h4 style="color: var(--success-color); margin-bottom: 0.5rem;">Detection Accuracy</h4>
-                            <p style="color: var(--text-secondary);">Rapid state change identification as key indicator</p>
-                            <p style="font-size: 2rem; font-weight: 700; color: var(--primary-color); margin-top: 1rem;">95%+ accuracy</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Financial NLP -->
-            <div class="card" id="financial-nlp" style="margin-bottom: 3rem;">
-                <div class="grid grid-2" style="gap: 2rem;">
-                    <div>
-                        <div class="video-placeholder">
-                            <i class="fas fa-image"></i>
-                            <p>Project Screenshots Coming Soon</p>
-                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Upload screenshots to: assets/financial-nlp-*.png</p>
-                        </div>
-                        <div style="margin-top: 1rem; padding: 1.5rem; background: var(--bg-secondary); border-radius: var(--radius-md); border-left: 4px solid var(--secondary-color);">
-                            <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Collaboration</h4>
-                            <p style="color: var(--text-secondary);">RAG pipeline development led to research collaboration with Penn State University</p>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="project-category">NLP & Finance · West Virginia University</span>
-                        <h3 style="font-size: 2rem; margin: 1rem 0; color: var(--text-primary);">Financial Sentiment Analysis System</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                            Built comprehensive NLP system for market prediction using multi-source sentiment analysis. Developed RAG pipeline with vector databases for financial intelligence extraction from diverse data sources.
-                        </p>
-                        
-                        <h4 style="color: var(--primary-color); margin: 1.5rem 0 1rem;">System Components:</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> FinBERT-based sentiment classification</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> RAG pipeline with vector database integration</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> Multi-source data processing (Twitter, news, YouTube)</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> Real-time market sentiment tracking</li>
-                            <li style="padding: 0.5rem 0; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 0.5rem;"></i> Named entity recognition for financial instruments</li>
-                        </ul>
-
-                        <div class="project-tags" style="margin-top: 1.5rem;">
-                            <span class="tag">FinBERT</span>
-                            <span class="tag">RAG</span>
-                            <span class="tag">Vector DB</span>
-                            <span class="tag">NLP</span>
-                            <span class="tag">Transformers</span>
-                            <span class="tag">Hugging Face</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Academic ML Projects -->
-        <section class="section" id="academic-projects">
-            <h2 class="section-title">Academic ML Projects</h2>
-            <p class="section-subtitle">13 algorithm-focused projects completed during Master's degree</p>
-
-            <div class="grid grid-3">
-                <!-- Credit Card Fraud Detection -->
-                <div class="card">
-                    <div class="project-image placeholder">
-                        <i class="fas fa-credit-card"></i>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Deep Learning</span>
-                        <h3>Credit Card Fraud Detection</h3>
-                        <p>Advanced anomaly detection using autoencoders and isolation forests for imbalanced datasets. Achieved high precision with SMOTE and ensemble methods.</p>
-                        <div class="project-tags">
-                            <span class="tag">Scikit-learn</span>
-                            <span class="tag">Imbalanced Data</span>
-                            <span class="tag">Ensemble Methods</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Super Resolution -->
-                <div class="card">
-                    <div class="project-image placeholder">
-                        <i class="fas fa-images"></i>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Computer Vision</span>
-                        <h3>Image Super Resolution</h3>
-                        <p>Implemented SRCNN and ESRGAN for upscaling low-resolution images. Explored perceptual loss functions and GAN training techniques.</p>
-                        <div class="project-tags">
-                            <span class="tag">PyTorch</span>
-                            <span class="tag">GANs</span>
-                            <span class="tag">Computer Vision</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Diffusion Models -->
-                <div class="card">
-                    <div class="project-image placeholder">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Generative AI</span>
-                        <h3>Diffusion Models</h3>
-                        <p>Built denoising diffusion probabilistic models (DDPM) for image generation. Studied noise scheduling and sampling strategies.</p>
-                        <div class="project-tags">
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">Diffusion</span>
-                            <span class="tag">Generative Models</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 2rem;">
-                <p style="color: var(--text-secondary); font-size: 1.1rem;">
-                    <i class="fas fa-lightbulb" style="color: var(--accent-color);"></i>
-                    Additional projects include time series forecasting, text classification, recommendation systems, and more
-                </p>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="section">
-            <div class="card" style="text-align: center; background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; border: none;">
-                <h2 style="color: white; margin-bottom: 1rem;">Want to Learn More?</h2>
-                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 2rem;">Check out my full resume or get in touch to discuss these projects in detail.</p>
-                <div class="btn-group">
-                    <a href="resume.html" class="btn btn-outline">View Resume</a>
-                    <a href="contact.html" class="btn btn-outline">Contact Me</a>
-                </div>
+            <a href="assets/Resume_2025_10_Peter.pdf" class="btn-download" download>
+                <i class="fas fa-download"></i> Download Resume
+            </a>
         </div>
-        </section>
+    </aside>
+
+    <!-- Right Content Area -->
+    <main class="main-content">
+        <header class="top-nav">
+            <h2>Projects</h2>
+            <nav class="page-tabs">
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        
+        <div class="content-wrapper-scrollable">
+            <p class="page-intro">Production AI Systems, ML Research & Full-Stack Development across insurance, legal tech, finance, and critical infrastructure.</p>
+
+            <!-- Production AI Projects -->
+            <section class="projects-section">
+                <h2 class="section-title-simple"><i class="fas fa-rocket"></i> Production AI Systems</h2>
+                
+                <!-- Medical Records System -->
+                <div class="project-detail-card" id="medical-records">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-badge">Production AI</span>
+                            <h3>Agentic Medical Record Request System</h3>
+                            <p class="project-company">Neptune Technologies Inc. • Dec 2024 - Present</p>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Designed and built a comprehensive full-stack application for law firms that automates the entire medical record retrieval process from healthcare providers. The system uses intelligent email and fax integrations with automatic response polling and Temporal workflow orchestration, saving 100+ hours of manual work weekly.
+                        </p>
+                        <div class="project-details-grid">
+                            <div class="detail-section">
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>React-based case management interface with real-time status tracking</li>
+                                    <li>FastAPI backend with Temporal workflow orchestration</li>
+                                    <li>Automated email/fax integrations with intelligent response polling</li>
+                                    <li>PostgreSQL database for reliable state management</li>
+                                </ul>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Technologies</h4>
+                                <div class="tech-pills">
+                                    <span>FastAPI</span>
+                                    <span>React</span>
+                                    <span>TypeScript</span>
+                                    <span>Temporal</span>
+                                    <span>PostgreSQL</span>
+                                    <span>AWS</span>
+                                    <span>Cursor AI</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-placeholder-inline">
+                            <i class="fas fa-video"></i>
+                            <p>Demo Video Placeholder</p>
+                            <small>Upload to: assets/medical-records-demo.mp4</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insurance Claims -->
+                <div class="project-detail-card" id="insurance-claims">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-badge">Document Intelligence</span>
+                            <h3>Insurance Claims Automation</h3>
+                            <p class="project-company">Neptune Technologies Inc. • Dec 2024 - Present</p>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Multi-agent AI system for processing Bodily Injury and Property Damage claims end-to-end. Built intelligent document processing pipeline handling mold inspection reports, policy documents, damage estimates, and accident data with 95%+ field extraction accuracy.
+                        </p>
+                        <div class="project-details-grid">
+                            <div class="detail-section">
+                                <h4>Technical Highlights</h4>
+                                <ul>
+                                    <li>OpenAI-powered text extraction and OCR for scanned documents</li>
+                                    <li>Hybrid rule-based and LLM field extraction (95%+ accuracy)</li>
+                                    <li>Multi-agent coordination for complex claim workflows</li>
+                                    <li>Litify (Salesforce) platform integration</li>
+                                    <li>Deployed on AWS EC2 with GitLab CI/CD</li>
+                                </ul>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Technologies</h4>
+                                <div class="tech-pills">
+                                    <span>OpenAI</span>
+                                    <span>OCR</span>
+                                    <span>LangChain</span>
+                                    <span>Python</span>
+                                    <span>AWS EC2</span>
+                                    <span>GitLab CI/CD</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-placeholder-inline">
+                            <i class="fas fa-video"></i>
+                            <p>Demo Video Placeholder</p>
+                            <small>Upload to: assets/insurance-claims-demo.mp4</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ML Research Projects -->
+            <section class="projects-section">
+                <h2 class="section-title-simple"><i class="fas fa-flask"></i> ML Research</h2>
+                
+                <!-- Power Grid Security -->
+                <div class="project-detail-card" id="power-grid">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-badge award">Best Paper Award</span>
+                            <h3>Power Grid Anomaly Detection</h3>
+                            <p class="project-company">West Virginia University • Aug 2022 - Dec 2024</p>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Advanced machine learning research for critical infrastructure protection. Engineered temporal dependency features from network packet streams to detect cyber attacks on power grid systems with 95%+ accuracy. Published and won Best Paper Award at 2023 North American Power Symposium.
+                        </p>
+                        <div class="project-details-grid">
+                            <div class="detail-section">
+                                <h4>Research Contributions</h4>
+                                <ul>
+                                    <li>Novel temporal feature engineering achieving 95%+ accuracy</li>
+                                    <li>Variational autoencoders for attack pattern recognition</li>
+                                    <li>Transformer models for sequence analysis</li>
+                                    <li>Processing raw Wireshark captures for IEC61850 GOOSE protocol</li>
+                                    <li>Digital twin integration for real-time monitoring</li>
+                                </ul>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Technologies</h4>
+                                <div class="tech-pills">
+                                    <span>PyTorch</span>
+                                    <span>Transformers</span>
+                                    <span>VAE</span>
+                                    <span>Wireshark</span>
+                                    <span>Time Series</span>
+                                </div>
+                                <h4 style="margin-top: 1rem;">Publication</h4>
+                                <p style="font-size: 0.85rem; line-height: 1.5; margin-top: 0.5rem;">"Analyzing GOOSE Security in IEC61850-based Substation using ML, SDN and Digital Twin" - 2023 North American Power Symposium</p>
+                            </div>
+                        </div>
+                        <div class="video-placeholder-inline">
+                            <i class="fas fa-image"></i>
+                            <p>Research Visualizations Placeholder</p>
+                            <small>Upload to: assets/power-grid-*.png</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financial NLP -->
+                <div class="project-detail-card" id="financial-nlp">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-badge">NLP & Finance</span>
+                            <h3>Financial Sentiment Analysis System</h3>
+                            <p class="project-company">West Virginia University • Aug 2022 - Dec 2024</p>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Built comprehensive NLP system for market prediction using multi-source sentiment analysis. Developed RAG pipeline with vector databases for financial intelligence extraction from tweets, news articles, and YouTube comments using FinBERT.
+                        </p>
+                        <div class="project-details-grid">
+                            <div class="detail-section">
+                                <h4>System Components</h4>
+                                <ul>
+                                    <li>FinBERT-based sentiment classification</li>
+                                    <li>RAG pipeline with vector database integration</li>
+                                    <li>Multi-source data processing (Twitter, news, YouTube)</li>
+                                    <li>Real-time market sentiment tracking</li>
+                                    <li>Named entity recognition for financial instruments</li>
+                                </ul>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Technologies</h4>
+                                <div class="tech-pills">
+                                    <span>FinBERT</span>
+                                    <span>RAG</span>
+                                    <span>Vector DB</span>
+                                    <span>Transformers</span>
+                                    <span>Hugging Face</span>
+                                    <span>NLP</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-placeholder-inline">
+                            <i class="fas fa-image"></i>
+                            <p>Project Screenshots Placeholder</p>
+                            <small>Upload to: assets/financial-nlp-*.png</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Academic Projects -->
+            <section class="projects-section">
+                <h2 class="section-title-simple"><i class="fas fa-graduation-cap"></i> Academic ML Projects</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">13 algorithm-focused projects completed during Master's degree in Advanced ML, Deep Learning, and Big Data Analytics courses.</p>
+                
+                <div class="academic-projects-grid">
+                    <div class="academic-project-card">
+                        <div class="academic-icon"><i class="fas fa-credit-card"></i></div>
+                        <h4>Credit Card Fraud Detection</h4>
+                        <p>Advanced anomaly detection using autoencoders and isolation forests. SMOTE and ensemble methods for imbalanced datasets.</p>
+                        <div class="tech-pills">
+                            <span>Scikit-learn</span>
+                            <span>Autoencoders</span>
+                        </div>
+                    </div>
+
+                    <div class="academic-project-card">
+                        <div class="academic-icon"><i class="fas fa-images"></i></div>
+                        <h4>Image Super Resolution</h4>
+                        <p>SRCNN and ESRGAN for upscaling low-resolution images with perceptual loss functions.</p>
+                        <div class="tech-pills">
+                            <span>PyTorch</span>
+                            <span>GANs</span>
+                        </div>
+                    </div>
+
+                    <div class="academic-project-card">
+                        <div class="academic-icon"><i class="fas fa-paint-brush"></i></div>
+                        <h4>Diffusion Models</h4>
+                        <p>Built denoising diffusion probabilistic models (DDPM) for image generation.</p>
+                        <div class="tech-pills">
+                            <span>TensorFlow</span>
+                            <span>Diffusion</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
-
-    <script>
-        // Smooth scroll behavior
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Check for hash in URL on page load
-        if (window.location.hash) {
-            setTimeout(() => {
-                const target = document.querySelector(window.location.hash);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }, 100);
-        }
-    </script>
 </body>
 </html>
