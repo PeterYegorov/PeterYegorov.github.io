@@ -5,109 +5,280 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume | Peter Yegorov</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/168049ce2f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav>
-            <a class="logo" href="index.html">Peter Yegorov</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a class="active" href="resume.html">Resume</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section class="hero">
-            <div class="hero-text">
-                <p class="eyebrow">Digital Resume</p>
-                <h1>Structure your story before we turn it into a polished PDF.</h1>
-                <p>Use this page as the living transcript of your resume: list experiences, highlight wins, and point to artifacts. The download link below references the resume PDF so people can keep an editable copy.</p>
-                <div class="hero-actions">
-                    <a class="button" href="assets/PeterYegorov-Resume.pdf" download>Download resume (PDF)</a>
-                    <a class="button ghost" href="index.html">Return to home</a>
+        <!-- Resume Header -->
+        <section class="hero fade-in">
+            <div class="hero-content">
+                <h1>Resume</h1>
+                <p class="subtitle">Full-Stack AI Engineer | ML Researcher</p>
+                <div class="btn-group">
+                    <a href="assets/Resume_2025_10_Peter.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i> Download PDF Resume
+                    </a>
+                    <a href="contact.html" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> Get In Touch
+                    </a>
                 </div>
-                <p class="hint">Update the PDF in the <code>assets/</code> folder once your resume changes.</p>
-            </div>
-            <div class="hero-media">
-                <div class="portrait-placeholder">
-                    <span>Resume snapshot placeholder</span>
-                </div>
-                <p class="hint">Replace this placeholder with a quick résumé summary once you finalize the text.</p>
             </div>
         </section>
 
-        <section class="section" aria-labelledby="resume-grid">
-            <h2 id="resume-grid">Experience at a glance</h2>
-            <div class="resume-grid">
-                <article class="resume-block">
-                    <h3>Experience</h3>
-                    <ul>
-                        <li><strong>Graduate Researcher</strong> – Placeholder University (Month Year – Month Year). Include thesis title, tools, and impact.</li>
-                        <li><strong>Product Engineer</strong> – Placeholder Company (Month Year – Present). Mention the systems you own and metrics you influenced.</li>
-                        <li><strong>Founder / Creator</strong> – Building your own app. Highlight your product's goal, traction, and next milestones.</li>
-                    </ul>
-                </article>
-                <article class="resume-block">
-                    <h3>Education</h3>
-                    <ul>
-                        <li>Master of Science, Field – University Name, Year</li>
-                        <li>Bachelor of Science, Field – University Name, Year</li>
-                        <li>Certifications or workshops (if applicable)</li>
-                    </ul>
-                </article>
-                <article class="resume-block">
-                    <h3>Skills</h3>
-                    <ul>
-                        <li>Full-stack development, system design, research methodology</li>
-                        <li>Python, TypeScript, data visualization, ML toolchains</li>
-                        <li>Communication, mentoring, leadership across distributed teams</li>
-                    </ul>
-                </article>
-                <article class="resume-block">
-                    <h3>Tools & Platforms</h3>
-                    <ul>
-                        <li>Figma, Notion, Linear, GitHub, VS Code</li>
-                        <li>AWS / GCP / containers depending on stack</li>
-                        <li>Research tools: Jupyter, Colab, MATLAB, signal/data processing libs</li>
-                    </ul>
-                </article>
+        <!-- Professional Summary -->
+        <section class="section">
+            <div class="card">
+                <h2 style="margin-bottom: 1rem; color: var(--primary-color);"><i class="fas fa-user-tie"></i> Professional Summary</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    Full-stack AI engineer with Master's in CS specializing in production ML and design-driven development. Expert in building end-to-end agentic applications from UI design to API development, with proven ability to architect and deploy complex workflows for law firms and financial services. Passionate about leveraging AI-assisted development to accelerate product cycles while maintaining code quality and user experience.
+                </p>
             </div>
-            <p class="resume-download">Want a downloadable copy? Update <code>assets/PeterYegorov-Resume.pdf</code> to match this page.</p>
         </section>
 
-        <section class="section" aria-labelledby="timeline">
-            <h2 id="timeline">Deep dive</h2>
-            <p>Break each role into bullet points, impact statements, and links to deliverables (papers, demos, videos). Replace the placeholder text with facts and context when you're ready.</p>
-            <div class="resume-grid">
-                <article class="resume-block">
-                    <h3>Masters & Research</h3>
+        <!-- Professional Experience -->
+        <section class="section" id="experience">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+            
+            <div class="timeline">
+                <!-- Neptune Technologies -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-title">AI Engineer - Insurance & Finance</div>
+                            <div class="timeline-company">Neptune Technologies Inc.</div>
+                        </div>
+                        <div class="timeline-date">December 2024 - Present</div>
+                    </div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li><strong>Agentic Medical Record Request System:</strong> Designed and built full-stack application for law firms automating medical record retrieval from healthcare providers using email and fax integrations with automatic response polling and temporal workflow orchestration in PostgreSQL, saving 100+ hours of manual work weekly</li>
+                            <li><strong>React Frontend & API Design:</strong> Architected responsive React interface for case management with real-time status tracking, integrated FastAPI backend with Temporal for reliable workflow execution, enabling seamless provider coordination at scale</li>
+                            <li><strong>Insurance Claims Automation:</strong> Developed multi-agent AI system for Bodily Injury and Property Damage claims workflows, processing mold inspection reports, policy documents, damage estimates, and accident data end-to-end</li>
+                            <li><strong>Document Intelligence Pipeline:</strong> Built IDP agent using OpenAI for text extraction and OCR on scanned documents, implementing hybrid rule-based and LLM approaches for field extraction from insurance documents with 95%+ accuracy</li>
+                            <li><strong>Cursor-Driven Development:</strong> Leveraged Cursor for rapid full-stack implementation, using AI-assisted code generation to accelerate feature development while maintaining production-grade code quality and comprehensive testing</li>
+                            <li><strong>Production Deployment:</strong> Deployed models to AWS EC2, implemented GitLab CI/CD workflows, conducted daily stand-ups translating technical solutions to business requirements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- West Virginia University -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-title">ML Researcher</div>
+                            <div class="timeline-company">West Virginia University</div>
+                        </div>
+                        <div class="timeline-date">August 2022 - December 2024</div>
+                    </div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li><strong>Advanced Feature Engineering:</strong> Engineered temporal dependency features from packet streams, achieving 95%+ accuracy in anomaly detection for power grid security systems by identifying rapid state changes as key indicators</li>
+                            <li><strong>Transformer Models:</strong> Implemented variational autoencoders and transformers for attack detection, processing raw Wireshark captures and creating novel algorithms for critical infrastructure protection</li>
+                            <li><strong>NLP & Financial Intelligence:</strong> Developed RAG pipeline with vector databases leading to Penn State collaboration; built sentiment analysis system processing tweets, news, and YouTube comments using FinBERT for market prediction</li>
+                            <li><strong>Cross-functional Impact:</strong> Mentored students; presented findings to stakeholders, winning best paper award</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section" id="education">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+            
+            <div class="grid grid-2">
+                <!-- Master's Degree -->
+                <div class="card">
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Master of Science in Computer Science</h3>
+                    <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem;">West Virginia University</p>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">December 2024</p>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="badge badge-success">GPA: 4.0/4.0</span>
+                    </div>
+                    <p style="margin-bottom: 0.75rem;"><strong>ML Projects:</strong></p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Completed 13 algorithm-focused projects including credit card fraud detection, super resolution, and diffusion models</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Relevant Coursework:</strong></p>
+                    <div class="project-tags">
+                        <span class="tag">Advanced Machine Learning</span>
+                        <span class="tag">Big Data Analytics</span>
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Business Intelligence</span>
+                    </div>
+                </div>
+
+                <!-- Bachelor's Degree -->
+                <div class="card">
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Bachelor of Science in Computer Science</h3>
+                    <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem;">West Virginia University</p>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">May 2023</p>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="badge badge-success">GPA: 3.7/4.0</span>
+                    </div>
+                    <p style="color: var(--text-secondary);">Strong foundation in computer science fundamentals, algorithms, data structures, software engineering, and mathematics.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Technical Skills</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4><i class="fas fa-robot"></i> AI-Assisted Development</h4>
                     <ul>
-                        <li>Project title / thesis: brief summary + data + outcome.</li>
-                        <li>Research collaboration: mention co-authors, conferences, and your role.</li>
+                        <li>Cursor (primary dev environment)</li>
+                        <li>Claude Code</li>
+                        <li>AI-driven architecture design</li>
+                        <li>Rapid prototyping with LLM assistance</li>
+                        <li>Code generation workflows</li>
                     </ul>
-                </article>
-                <article class="resume-block">
-                    <h3>Industry Work</h3>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-layer-group"></i> Full-Stack Development</h4>
                     <ul>
-                        <li>System overview: why was it built, what stack, what problem?</li>
-                        <li>Impact: KPIs improved, team size, leadership you'll emphasize.</li>
+                        <li>FastAPI (REST APIs)</li>
+                        <li>React (component design, state management)</li>
+                        <li>TypeScript</li>
+                        <li>PostgreSQL</li>
+                        <li>Temporal workflow orchestration</li>
+                        <li>Email/fax integrations</li>
+                        <li>API-first architecture</li>
                     </ul>
-                </article>
-                <article class="resume-block">
-                    <h3>Startup / App</h3>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-brain"></i> ML/AI Frameworks</h4>
                     <ul>
-                        <li>Vision for the product, target audience, and current progress.</li>
-                        <li>Next steps and how you want to keep investors/customers updated.</li>
+                        <li>PyTorch & TensorFlow</li>
+                        <li>Transformers (BERT, FinBERT)</li>
+                        <li>LangChain/LangGraph</li>
+                        <li>OpenAI API</li>
+                        <li>RAG pipelines with vector databases</li>
+                        <li>Hugging Face</li>
+                        <li>Named Entity Recognition</li>
+                        <li>Text classification & information extraction</li>
                     </ul>
-                </article>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-cloud"></i> Production Deployment</h4>
+                    <ul>
+                        <li>AWS (EC2, ECS, S3, Lambda)</li>
+                        <li>Docker</li>
+                        <li>GitLab CI/CD</li>
+                        <li>Automated testing</li>
+                        <li>Performance monitoring</li>
+                        <li>HIPAA/PII compliance awareness</li>
+                        <li>Security+</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-chart-bar"></i> Data Science Stack</h4>
+                    <ul>
+                        <li>Python (6+ years)</li>
+                        <li>Pandas & NumPy</li>
+                        <li>Scikit-learn</li>
+                        <li>Matplotlib</li>
+                        <li>Jupyter</li>
+                        <li>Git</li>
+                        <li>Anomaly detection</li>
+                        <li>Time series analysis</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-industry"></i> Domain Expertise</h4>
+                    <ul>
+                        <li>Insurance claims automation</li>
+                        <li>Legal tech workflows</li>
+                        <li>Document intelligence</li>
+                        <li>Financial modeling</li>
+                        <li>Power grid systems</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements & Publications -->
+        <section class="section" id="achievements">
+            <h2 class="section-title"><i class="fas fa-trophy"></i> Achievements & Publications</h2>
+            
+            <div class="grid grid-2">
+                <!-- Certifications -->
+                <div class="card">
+                    <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                    <div style="margin-top: 1.5rem;">
+                        <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md); margin-bottom: 1rem; border-left: 4px solid var(--primary-color);">
+                            <strong style="color: var(--primary-color);">Oracle Cloud Generative AI Professional</strong>
+                            <p style="color: var(--text-secondary); margin-top: 0.5rem;">Advanced certification in cloud-based generative AI systems and deployment</p>
+                        </div>
+                        <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md); border-left: 4px solid var(--secondary-color);">
+                            <strong style="color: var(--secondary-color);">CompTIA Security+</strong>
+                            <p style="color: var(--text-secondary); margin-top: 0.5rem;">Data privacy, compliance, and cybersecurity fundamentals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publications -->
+                <div class="card">
+                    <h3><i class="fas fa-book"></i> Publications</h3>
+                    <div style="margin-top: 1.5rem;">
+                        <div style="padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md); border-left: 4px solid var(--accent-color);">
+                            <span class="badge badge-warning">Best Paper Award</span>
+                            <p style="margin-top: 1rem; font-weight: 600; color: var(--text-primary);">"Analyzing GOOSE Security in IEC61850-based Substation using ML, SDN and Digital Twin"</p>
+                            <p style="color: var(--text-secondary); margin-top: 0.5rem;">2023 North American Power Symposium</p>
+                            <p style="color: var(--text-secondary); margin-top: 0.75rem; font-size: 0.95rem;">Research on machine learning approaches for critical infrastructure security, achieving 95%+ accuracy in anomaly detection for power grid systems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Achievement -->
+                <div class="card" style="grid-column: 1 / -1;">
+                    <h3><i class="fas fa-project-diagram"></i> Insurance Domain Expertise</h3>
+                    <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Mapped entire claims workflows in Litify (Salesforce-based) platform through manual case review, developing comprehensive understanding of insurance operations from first notice of loss to settlement.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="section">
+            <div class="card" style="text-align: center; background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; border: none;">
+                <h2 style="color: white; margin-bottom: 1rem;">Let's Work Together</h2>
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 2rem;">Interested in collaborating or learning more about my work? Get in touch!</p>
+                <div class="btn-group">
+                    <a href="contact.html" class="btn btn-outline">Contact Me</a>
+                    <a href="projects.html" class="btn btn-outline">View Projects</a>
+                </div>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <p>Ready for edits? Send your latest resume, media, and notes to update this page.</p>
-    </footer>
+
+    <script>
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
