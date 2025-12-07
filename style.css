@@ -71,14 +71,16 @@ body, html {
     background: var(--bg-secondary);
     scroll-behavior: smooth;
     height: 100%;
+    overflow: hidden; /* Prevent body scrolling */
 }
 
 /* Two-Column Layout */
 .two-column-layout {
     display: flex;
-    min-height: 100vh;
+    height: 100vh; /* Fixed height instead of min-height */
     margin: 0;
     padding: 0;
+    overflow: hidden; /* Prevent layout scrolling */
 }
 
 /* Portfolio Toggle - Small and Minimal */
@@ -314,65 +316,74 @@ body, html {
     flex: 1;
     background: var(--bg-secondary);
     height: 100vh;
-    overflow-y: hidden; /* NO scrolling on homepage */
+    overflow: hidden; /* NO scrolling on main container */
     display: flex;
     flex-direction: column;
 }
 
 .top-nav {
     background: var(--bg-card);
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
     box-shadow: var(--shadow-sm);
     border-bottom: 1px solid var(--border-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
 }
 
 .top-nav h2 {
     margin: 0;
     color: var(--text-primary);
     font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .page-tabs {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.25rem;
+    background: var(--bg-secondary);
+    padding: 0.3rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
 }
 
 .page-tabs a {
     padding: 0.5rem 1rem;
     text-decoration: none;
     color: var(--text-secondary);
-    font-weight: 500;
-    font-size: 0.9rem;
+    font-weight: 600;
+    font-size: 0.85rem;
     border-radius: var(--radius-sm);
     transition: var(--transition);
-    border: 1px solid transparent;
+    border: none;
 }
 
 .page-tabs a:hover {
-    background: var(--bg-secondary);
+    background: rgba(30, 58, 138, 0.1);
     color: var(--primary-color);
 }
 
 .page-tabs a.active {
     background: var(--primary-color);
     color: white;
-    border-color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
 }
 
 .content-wrapper-compact {
-    padding: 1.5rem 2rem;
-    overflow-y: auto; /* Allow scrolling only if needed */
+    padding: 1rem 2rem;
+    overflow-y: auto;
     flex: 1;
+    min-height: 0;
 }
 
 .content-wrapper-scrollable {
     padding: 1.5rem 2rem;
     overflow-y: auto;
     flex: 1;
-    height: calc(100vh - 60px); /* Full height minus top nav */
+    min-height: 0; /* Important for flexbox scrolling */
 }
 
 .page-intro {
@@ -936,14 +947,14 @@ body, html {
 /* Compact Sections */
 .about-compact {
     background: var(--bg-card);
-    padding: 1.25rem;
+    padding: 1rem;
     border-radius: var(--radius-lg);
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     box-shadow: var(--shadow-sm);
 }
 
 .about-compact h2 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--text-primary);
     margin: 0 0 0.75rem 0;
     display: flex;
@@ -959,16 +970,20 @@ body, html {
     font-size: 0.9rem;
     line-height: 1.6;
     color: var(--text-secondary);
-    margin: 0;
+    margin: 0 0 0.75rem 0;
+}
+
+.about-compact p:last-child {
+    margin-bottom: 0;
 }
 
 /* Links Section */
 .links-section {
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .links-section h2 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--text-primary);
     margin: 0 0 0.75rem 0;
     display: flex;
@@ -980,21 +995,36 @@ body, html {
     color: var(--primary-color);
 }
 
-.nav-cards-compact {
+/* 5-item grid that fits better */
+.nav-cards-five {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
+}
+
+.nav-cards-five .nav-link-card:nth-child(4),
+.nav-cards-five .nav-link-card:nth-child(5) {
+    grid-column: span 1;
+}
+
+/* Make the last row centered if needed */
+.nav-cards-five .nav-link-card:nth-child(4) {
+    grid-column: 1 / 2;
+}
+
+.nav-cards-five .nav-link-card:nth-child(5) {
+    grid-column: 2 / 3;
 }
 
 .nav-link-card {
     background: var(--bg-card);
-    padding: 1rem;
+    padding: 0.85rem;
     border-radius: var(--radius-md);
     border: 2px solid var(--border-color);
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.65rem;
     transition: var(--transition);
 }
 
@@ -1005,8 +1035,8 @@ body, html {
 }
 
 .link-icon {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     border-radius: var(--radius-md);
     display: flex;
@@ -1016,7 +1046,7 @@ body, html {
 }
 
 .link-icon i {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: white;
 }
 
@@ -1025,13 +1055,13 @@ body, html {
 }
 
 .link-content h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text-primary);
-    margin: 0 0 0.15rem 0;
+    margin: 0 0 0.1rem 0;
 }
 
 .link-content p {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
     margin: 0;
     line-height: 1.3;
@@ -1039,7 +1069,7 @@ body, html {
 
 .link-arrow {
     color: var(--primary-color);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: var(--transition);
 }
 
@@ -1102,11 +1132,11 @@ body, html {
 
 /* Skills Compact */
 .skills-compact {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .skills-compact h2 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--text-primary);
     margin: 0 0 0.75rem 0;
     display: flex;
@@ -1121,11 +1151,11 @@ body, html {
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.45rem;
 }
 
 .tech-tags span {
-    padding: 0.4rem 0.75rem;
+    padding: 0.35rem 0.7rem;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
