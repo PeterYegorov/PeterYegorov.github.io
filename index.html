@@ -52,7 +52,7 @@
             </div>
 
             <!-- Download Resume Button -->
-            <a href="assets/Resume_2025_10_Peter.pdf" class="btn-download" download>
+            <a href="assets/ResumePeterYegorov-2025.pdf" class="btn-download" download>
                 <i class="fas fa-download"></i> Download Resume
             </a>
         </div>
@@ -144,10 +144,16 @@
     </main>
 
     <script>
+        // Handle anchor links that go to other pages
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                // If it's a link to resume.html with an anchor, let it navigate normally
+                if (href.includes('resume.html#')) {
+                    return; // Allow normal navigation
+                }
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const target = document.querySelector(href);
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }

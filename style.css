@@ -72,6 +72,9 @@ body, html {
     scroll-behavior: smooth;
     height: 100%;
     overflow: hidden; /* Prevent body scrolling */
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 /* Two-Column Layout */
@@ -81,6 +84,8 @@ body, html {
     margin: 0;
     padding: 0;
     overflow: hidden; /* Prevent layout scrolling */
+    width: 100%;
+    position: relative;
 }
 
 /* Portfolio Toggle - Small and Minimal */
@@ -136,7 +141,7 @@ body, html {
     width: var(--sidebar-width);
     background: linear-gradient(180deg, var(--bg-sidebar) 0%, var(--primary-dark) 100%);
     color: var(--text-on-dark);
-    padding: 1.75rem 1.5rem;
+    padding: 1.5rem 1.5rem 1.75rem 1.5rem;
     position: fixed;
     left: 0;
     top: 0;
@@ -145,24 +150,24 @@ body, html {
     box-shadow: var(--shadow-xl);
     z-index: 100;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .sidebar-content {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
     width: 100%;
 }
 
 .sidebar-photo {
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .sidebar-photo img {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid rgba(255, 255, 255, 0.2);
@@ -313,12 +318,19 @@ body, html {
 /* Main Content Area - Compact, No Scrolling */
 .main-content {
     margin-left: var(--sidebar-width);
-    flex: 1;
+    flex: 1 1 auto;
     background: var(--bg-secondary);
     height: 100vh;
     overflow: hidden; /* NO scrolling on main container */
+    overflow-x: hidden; /* Prevent horizontal overflow */
     display: flex;
     flex-direction: column;
+    min-width: 0; /* Prevent flex item from overflowing */
+    position: relative;
+    width: calc(100% - var(--sidebar-width));
+    max-width: calc(100vw - var(--sidebar-width));
+    box-sizing: border-box;
+    isolation: isolate; /* Create new stacking context */
 }
 
 .top-nav {
@@ -331,7 +343,13 @@ body, html {
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 50;
+    z-index: 150;
+    background-color: var(--bg-card);
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .top-nav h2 {
@@ -384,6 +402,7 @@ body, html {
     overflow-y: auto;
     flex: 1;
     min-height: 0; /* Important for flexbox scrolling */
+    scroll-padding-top: 80px; /* Account for sticky header when scrolling to anchors */
 }
 
 .page-intro {
@@ -947,7 +966,7 @@ body, html {
 /* Compact Sections */
 .about-compact {
     background: var(--bg-card);
-    padding: 1rem;
+    padding: 0;
     border-radius: var(--radius-lg);
     margin-bottom: 1rem;
     box-shadow: var(--shadow-sm);
@@ -998,22 +1017,8 @@ body, html {
 /* 5-item grid that fits better */
 .nav-cards-five {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
-}
-
-.nav-cards-five .nav-link-card:nth-child(4),
-.nav-cards-five .nav-link-card:nth-child(5) {
-    grid-column: span 1;
-}
-
-/* Make the last row centered if needed */
-.nav-cards-five .nav-link-card:nth-child(4) {
-    grid-column: 1 / 2;
-}
-
-.nav-cards-five .nav-link-card:nth-child(5) {
-    grid-column: 2 / 3;
 }
 
 .nav-link-card {
